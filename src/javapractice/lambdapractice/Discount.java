@@ -1,4 +1,4 @@
-package javapractice;
+package javapractice.lambdapractice;
 
 @FunctionalInterface
 public interface Discount {

@@ -1,4 +1,4 @@
-package javapractice;
+package javapractice.lambdapractice;
 
 public class FlatDiscount implements Discount{
     @Override

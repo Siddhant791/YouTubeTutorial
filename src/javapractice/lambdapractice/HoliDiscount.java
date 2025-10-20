@@ -1,4 +1,4 @@
-package javapractice;
+package javapractice.lambdapractice;
 
 public class HoliDiscount implements Discount{
     @Override
@@ -7,3 +7,4 @@ public class HoliDiscount implements Discount{
     }
 
 }
+
