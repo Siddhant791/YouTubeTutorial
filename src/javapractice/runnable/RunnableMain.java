@@ -43,7 +43,7 @@ public class RunnableMain {
         Ingredients onion = new Onion();
         Ingredients tomato = new Tomato();
 
-        Callable onionCutting = () -> {
+        Callable<List<Pieces>> onionCutting = () -> {
             try {
                 List<Pieces> tomatoPices = tomato.cut(5);
                 return tomatoPices;
@@ -52,7 +52,7 @@ public class RunnableMain {
             }
         };
 
-        Thread chotaBhai = new Thread(onionCutting);
+        Thread chotaBhai = new Thread();
         chotaBhai.start();
 
         piecesList.addAll(onion.cut(5));
