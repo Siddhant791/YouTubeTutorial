@@ -84,7 +84,6 @@ public class RunnableMain {
 //        // when we call start() method of thread class it calls run method of itself on a new thread
 //
         long endTime = System.currentTimeMillis();
-
         System.out.println("Total time taken is " + (endTime - startTime)/1000.0 + " seconds");
     }
 }
