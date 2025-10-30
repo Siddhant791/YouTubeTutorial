@@ -1,0 +1,52 @@
+@startuml
+interface Iterator {
+  +hasNext(): boolean
+  +next(): Song
+}
+
+class PlayList {
+  -songs: List\<Song\>
+  +PlayList(songs: List\<Song\>)
+  +createIterator(type: String): Iterator
+  +getSongs(): List\<Song\>
+}
+
+class Song {
+  -title: String
+  +Song(title: String)
+  +getTitle(): String
+  +toString(): String
+}
+
+class Player {
+  +play(playList: PlayList, mode: String): void
+}
+
+class LinearIterator {
+  -index: int
+  +LinearIterator(playList: PlayList)
+  +hasNext(): boolean
+  +next(): Song
+}
+
+class RandomIterator {
+  -remaining: List\<Integer\>
+  +RandomIterator(playList: PlayList)
+  +hasNext(): boolean
+  +next(): Song
+}
+
+class IteratorMain {
+  +main(args: String[]): void
+}
+
+PlayList "1" o-- "*" Song : contains
+PlayList ..> Iterator : createIterator()
+Player ..> PlayList : uses
+Player ..> Iterator : uses
+IteratorMain ..> Player
+IteratorMain ..> PlayList
+
+LinearIterator -|> Iterator
+RandomIterator -|> Iterator
+@enduml
