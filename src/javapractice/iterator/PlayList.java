@@ -9,6 +9,10 @@ public class PlayList {
         this.playList = playList;
     }
 
+    public List<Song> getSongList() {
+        return playList;
+    }
+
 //    public void playLinear() throws InterruptedException {
 //        for (Song s: playList){
 //            s.play();
@@ -31,16 +35,16 @@ public class PlayList {
 
 //    }
 
-    public Iterator getIterator(String name){
-        if (name.equals("linear")){
-            return new LinearIterator(playList);
-        }
-        else if (name.equals("random")){
-            return new RandomIterator(playList);
-        }
-        else {
-            return null;
-        }
-
-    }
+//    public Iterator getIterator(String name){
+//        if (name.equals("linear")){
+//            return new LinearIterator(playList);
+//        }
+//        else if (name.equals("random")){
+//            return new RandomIterator(playList);
+//        }
+//        else {
+//            return null;
+//        }
+//
+//    }
 }

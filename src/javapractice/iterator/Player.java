@@ -1,8 +1,7 @@
 package javapractice.iterator;
 
 public class Player {
-    public void play(PlayList playList, String type) throws InterruptedException {
-        Iterator iterator = playList.getIterator(type);
+    public void play(Iterator iterator) throws InterruptedException {
         while (iterator.hasNext()){
             iterator.next().play();
         }

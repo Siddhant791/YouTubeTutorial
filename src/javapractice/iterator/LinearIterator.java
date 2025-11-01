@@ -7,8 +7,8 @@ public class LinearIterator implements Iterator{
     private final List<Song> songList;
     int currentIndex;
 
-    public LinearIterator(List<Song> songList){
-        this.songList = songList;
+    public LinearIterator(PlayList playList) {
+        this.songList = playList.getSongList();
         this.currentIndex = 0;
     }
 
