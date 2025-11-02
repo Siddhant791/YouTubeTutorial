@@ -6,8 +6,8 @@ import java.util.List;
 public class RandomIterator implements Iterator{
     private final List<Song> songList;
 
-    public RandomIterator(List<Song> songList) {
-        this.songList = songList;
+    public RandomIterator(PlayList playList) {
+        this.songList = playList.getSongList();
     }
 
     @Override
