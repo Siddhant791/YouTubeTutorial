@@ -4,7 +4,6 @@ import javapractice.iterator.factory.IteratorFactory;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
 
 public class IteratorMain {
     public static void main(String[] args) throws InterruptedException {
