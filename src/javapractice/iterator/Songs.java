@@ -14,7 +14,8 @@ public class Songs {
                 '}';
     }
 
-    public void play(){
+    public void play() throws InterruptedException {
+        Thread.sleep(2000);
         System.out.println("Playing song: " + title);
     }
 }
